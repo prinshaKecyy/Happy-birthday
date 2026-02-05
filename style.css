@@ -45,17 +45,27 @@ body {
 
 .music-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #ff758f, #ff4d6d);
+  top: 50%;             /* vertical center */
+  left: 50%;            /* horizontal center */
+  transform: translate(-50%, -50%); /* center precisely */
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
   border: none;
   color: white;
-  padding: 12px 22px;
-  border-radius: 30px;
-  font-size: 14px;
+  padding: 14px 30px;
+  border-radius: 60px;
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
-  z-index: 3;
+  box-shadow: 0 15px 50px rgba(255, 77, 109, 0.7);
+  z-index: 10000;
+  animation: pulseBtn 2s infinite;
+  width: 6cm;
+}
+
+@keyframes pulseBtn {
+  0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 15px 50px rgba(255, 77, 109, 0.7); }
+  50% { transform: translate(-50%, -50%) scale(1.15); box-shadow: 0 18px 60px rgba(255, 77, 109, 0.85); }
+  100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 15px 50px rgba(255, 77, 109, 0.7); }
 }
 
 /* CONTENT ABOVE PARTICLES */
@@ -245,6 +255,7 @@ footer {
     max-width: 300px;
   }
 }
+
 
 
 
