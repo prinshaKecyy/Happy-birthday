@@ -48,16 +48,25 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(135deg, #ff758f, #ff4d6d);
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
   border: none;
   color: white;
-  padding: 12px 22px;
-  border-radius: 30px;
-  font-size: 14px;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 77, 109, 0.5);
   z-index: 999;
+  animation: pulseBtn 2s infinite;
 }
+
+@keyframes pulseBtn {
+  0% { transform: scale(1); box-shadow: 0 10px 30px rgba(255, 77, 109, 0.5); }
+  50% { transform: scale(1.1); box-shadow: 0 12px 35px rgba(255, 77, 109, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 10px 30px rgba(255, 77, 109, 0.5); }
+}
+
 
 /* HERO */
 .hero {
@@ -235,3 +244,4 @@ footer {
     max-width: 300px;
   }
 }
+
