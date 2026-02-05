@@ -45,22 +45,24 @@ body {
 
 .music-btn {
   position: fixed;
-  bottom: 40px;          /* a bit above the bottom edge */
-  left: 50%;             /* center horizontally */
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff758f, #ff4d6d);
   border: none;
   color: white;
-  padding: 20px 40px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 14px;
   cursor: pointer;
-  box-shadow: 0 12px 40px rgba(255, 77, 109, 0.6);
-  z-index: 999;
-  animation: pulseBtn 2s infinite;
+  box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+  z-index: 3;
 }
 
+/* CONTENT ABOVE PARTICLES */
+.hero, .photos, .message, .question, footer {
+  position: relative;
+  z-index: 2;
+}
 @keyframes pulseBtn {
   0% { transform: translateX(-50%) scale(1); box-shadow: 0 12px 40px rgba(255, 77, 109, 0.6); }
   50% { transform: translateX(-50%) scale(1.15); box-shadow: 0 15px 50px rgba(255, 77, 109, 0.75); }
@@ -243,5 +245,6 @@ footer {
     max-width: 300px;
   }
 }
+
 
 
